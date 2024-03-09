@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starkers Eleventy</title>
+    <link rel="stylesheet" href="./assets/style.css" type="text/css" >
+</head>
+<body>
+    <!-- {% if page.url == "/" %} -->
+    <header class="header-home">
+        <div class="logo"> <img src="" alt="" srcset=""> </div>
+        <h1 class="title">Starkers <span>11ty</span></h1>
+
+        <button id="roundButton" class="justFade">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </button>
+    
+        <nav id="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--
+    {% else %}
+    <header class="header-page">
+        <div class="logo">Logo</div>
+        <h1 class="title">Starkers <span>11ty</span></h1>
+
+        <button id="roundButton" class="justFade">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </button>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Folio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% endif %}
+    -->
+    <main>
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, mollitia! Delectus iure dolores dolore totam nemo temporibus nesciunt ipsum, blanditiis quisquam recusandae veniam inventore unde quod quaerat, et, maxime esse.</p>
+    </main>
+    
+    <section class="blog-articles">
+
+        <h2>Blog</h2>
+
+        <article class="article">
+            <img src="./img/News-Article.jpg" alt="">
+            <h3>Blog article One</h3>
+            <date></date>
+            <p></p>
+            <a href="#">Read Article</a>
+        </article>
+        <article class="article">
+            <img src="./img/News-Article.jpg" alt="">
+            <h3>Blog article Two</h3>
+            <date></date>
+            <p></p>
+            <a href="#">Read Article</a>
+        </article>
+        <article class="article">
+            <img src="./img/News-Article.jpg" alt="">
+            <h3>Blog article Three</h3>
+            <date></date>
+            <p></p>
+            <a href="#">Read Article</a>
+        </article>
+        <article class="article">
+            <img src="./img/News-Article.jpg" alt="">
+            <h3>Blog article Four</h3>
+            <date></date>
+            <p></p>
+            <a href="#">Read Article</a>
+        </article>
+
+        <a href="#" class="read-more">Read More Blogs</a>
+    </section>
+
+    <aside class="clients">
+        <h2>Social Links</h2>
+        <a href="#" class="facebook"><img src=".assets/img/img.jpg" alt="Facebook" class="facebook-logo"></a>
+        <a href="#" class="instagram"><img src=".assets/img/img.jpg" alt="Instagram" class="instagram-logo"></a>
+    </aside>
+    
+    <footer>
+        <p> &copy; Starkers 11ty. All rights Reserved </p>
+    </footer>
+    <script src="./assets/script.js"></script>
+</body>
+</html>

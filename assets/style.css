@@ -1,0 +1,158 @@
+/* Global Styles */
+*, *::before, *::after{padding: 0; margin:0; box-sizing: border-box;}
+
+:root {
+    --primary-colour: #ffffff;
+    --secondary-colour: #000000;
+    --tertiary-colour:#000000;
+
+    --ff-header: 'Michroma', sans-serif;
+    --ff-text: 'Michroma', sans-serif;
+  }
+  
+body{background-color: var(--primary-colour); color:var(--secondary-colour); opacity: 100%; transition: opacity 0.5s;}
+
+h1{color: var(--secondary-colour);}
+h2{color: var(--secondary-colour); text-transform: uppercase;}
+h3{font-family: "Oswald", sans-serif; font-optical-sizing: auto; font-weight: 600; font-style: normal;}
+
+p{}
+p a{}
+
+ul{}
+li{list-style: none;}
+a{color: var(--tertiary-colour); text-decoration: none; text-decoration: underline;}
+
+input, .button{-webkit-appearance: none; -moz-appearance: none; appearance: none;}
+
+img{}
+img a{}
+
+/* -------------------------- CSS Animations ----------------------------------------- */
+
+  .fadeText { animation: fadeAndScale .4s ease-in-out; transform-origin: center bottom;}
+  @keyframes fadeAndScale{
+      from { opacity: 0; transform: scale3d(.75, .75, 1); },
+      to { opacity: 1; transform: scale3d(1, 1, 1); },
+  }
+  .justFade { animation: fadeAndScale .7s ease-in; transform-origin: center;}
+  @keyframes fadeAndScale{
+      from { opacity: 0; }, to { opacity: 1; },
+  }
+  .justFadeContent { animation: fadeAndScale .6s ease-in; transform-origin: center;}
+  @keyframes fadeAndScale{
+      from { opacity: 0; }, to { opacity: 1; },
+  }
+
+/* ----------------------------------------------------------------------------------- */
+
+header{}
+
+#navbar { width:100vw; height:100vh; position: fixed; top:0; left:0; background-color: var(--secondary-colour); color: var(--primary-colour); overflow: hidden; z-index: 2; transform: translate3d(0,-120vh,0); transition: transform .4s cubic-bezier(0, .52, 0, 1); }
+#navbar ul { position: static; text-align: center;}
+[id^=page-item_has_children]:checked + ul { display: block; }
+#navbar ul li, #navbar ul li a{ position: static; margin: 80px auto; padding:0; line-height:auto; display: block; color: var(--primary-colour); text-transform: uppercase;}
+#navbar ul li a:hover {color:var(--tertiary-colour); }
+#navbar.show { transform: translate3d(0vw, 0,0);}
+
+#roundButton { grid-column:2; grid-row: 1; cursor: pointer; border: none; background-color:transparent; margin:0; padding:18px 0 0 0; width: 30px; justify-items: center; vertical-align: top; position: absolute; right:20pt; top:10pt;}	
+.bar1, .bar2, .bar3 { width:100%; height: 3px; background-color: var(--secondary-colour); margin-bottom:7px; transition: 0.4s; }
+
+nav{ text-align: center; padding: 2% 0;}
+nav ul{width: 100%; vertical-align: middle;}
+nav ul li{display: inline-block; margin: 0 2%;}
+
+main{}
+
+section{}
+article{}
+
+aside{}
+
+footer{}
+
+
+
+/* ------------ Desktop Shenanigans ----- seconday-black primary-white ------- */
+
+@media (min-width: 870px) {
+
+    #navbar{ width:auto; height:auto; position:relative; background-color: transparent;  color: var(--secondary-colour); overflow: hidden; z-index: 12; transform: translate3d(0,0,0); transition: transform .4s cubic-bezier(0, .52, 0, 1); vertical-align:middle;}
+    #navbar ul { position: static; text-align: center;}
+    #navbar ul li, #navbar ul li a{color: var(--secondary-colour); margin:0 6pt; display: inline; font-weight:bold; font-size: 0.9em; text-transform: uppercase;}
+    #navbar ul li a:hover { color: var(--secondary-colour);}
+    #navbar.show { transform: translate3d(0vw, 0,0);}
+    
+    #roundButton, .bar1, .bar2, .bar3 {display: none;}
+}
+
+
+
+
+/* CSS RESET BELOW BY: https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
