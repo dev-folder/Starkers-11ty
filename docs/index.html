@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Starkers 11ty </title>
+    <link rel="stylesheet" href="./assets/style.css" type="text/css" >
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+    
+    
+	<header class="header-home">
+        <div class="logo"> <img src="" alt="" srcset=""> </div>
+        <h1 class="title">Starkers 11ty</h1>
+
+        <button id="roundButton" class="justFade">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </button>
+    
+        <nav id="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+
+    <main>
+        <h2>About Hello World</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, mollitia! Delectus iure dolores dolore totam nemo temporibus nesciunt ipsum, blanditiis quisquam recusandae veniam inventore unde quod quaerat, et, maxime esse.</p>
+    </main>
+    
+    <section class="blog-articles">
+
+        <h2>Blog Articles</h2>
+
+        
+        <article>
+            <ul>
+                <li><a href="/posts/blog-article-four/">Blog Article Four</a></li>
+            </ul>
+        </article>
+        
+        <article>
+            <ul>
+                <li><a href="/posts/blog-article-one/">Blog Article One</a></li>
+            </ul>
+        </article>
+        
+        <article>
+            <ul>
+                <li><a href="/posts/blog-article-three/">Blog Article Three</a></li>
+            </ul>
+        </article>
+        
+        <article>
+            <ul>
+                <li><a href="/posts/blog-article-two/">Blog Article Two</a></li>
+            </ul>
+        </article>
+        
+
+        <a href="#" class="read-more">Read More Blogs</a>
+    </section>
+
+    <aside class="clients">
+        <h2>Social Links</h2>
+        <a href="https://www.facebook.com/" class="facebook"><img src=".assets/img/img.jpg" alt="Facebook" class="facebook-logo"></a>
+        <a href="https://www.instagram.com/" class="instagram"><img src=".assets/img/img.jpg" alt="Instagram" class="instagram-logo"></a>
+    </aside>
+<footer>
+  <p> &copy;  2024. All rights Reserved </p>
+</footer>
+
+<script src="./assets/script.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

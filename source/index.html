@@ -1,0 +1,29 @@
+---
+layout: default.html
+---
+
+    <main>
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, mollitia! Delectus iure dolores dolore totam nemo temporibus nesciunt ipsum, blanditiis quisquam recusandae veniam inventore unde quod quaerat, et, maxime esse.</p>
+    </main>
+    
+    <section class="blog-articles">
+
+        <h2>Blog Articles</h2>
+
+        {% for post in collections.post %}
+        <article>
+            <ul>
+                <li><a href="{{post.url}}">{{post.data.title}}</a></li>
+            </ul>
+        </article>
+        {% endfor %}
+
+        <a href="#" class="read-more">Read More Blogs</a>
+    </section>
+
+    <aside class="clients">
+        <h2>Social Links</h2>
+        <a href="https://www.facebook.com/{{main.facebook}} " class="facebook"><img src=".assets/img/img.jpg" alt="Facebook" class="facebook-logo"></a>
+        <a href="https://www.instagram.com/{{main.instagram}} " class="instagram"><img src=".assets/img/img.jpg" alt="Instagram" class="instagram-logo"></a>
+    </aside>

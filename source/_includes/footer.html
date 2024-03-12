@@ -1,0 +1,18 @@
+<footer>
+  <p> &copy; {{ site.title }} {% year %}. All rights Reserved </p>
+</footer>
+
+<script src="./assets/script.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

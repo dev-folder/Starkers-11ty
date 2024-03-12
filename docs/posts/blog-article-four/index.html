@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Starkers 11ty </title>
+    <link rel="stylesheet" href="./assets/style.css" type="text/css" >
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+    
+    
+	<header class="header-page">
+        <div class="logo">Logo</div>
+        <h1 class="title">Starkers 11ty</h1>
+
+        <button id="roundButton" class="justFade">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </button>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Folio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+    
+
+<h1>This is post layout</h1>
+<h2>This is an h2</h2>
+<p>This is our paragraph and <em>it has bold</em></p>
+
+
+<footer>
+  <p> &copy;  2024. All rights Reserved </p>
+</footer>
+
+<script src="./assets/script.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>
